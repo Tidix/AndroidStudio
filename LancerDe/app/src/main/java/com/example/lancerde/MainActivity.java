@@ -37,10 +37,37 @@ public class MainActivity extends AppCompatActivity {
         vd1 = (int)Math.random()%6 +1;
         vd2 = (int)Math.random()%6 +1;
         vd3 = (int)Math.random()%6 +1;
-
+        changerImage();
 
     }
 
+    public void changerImage(){
+        switch(vd1){
+            default:
+            case 2:
+                //faut changer l'image selon la valeur lel
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+        }
+        switch(vd2){
+            default:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+        }
+        switch(vd3){
+            default:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+        }
+    }
 
     public void initiate(){
         button = findViewById(R.id.bouton);
