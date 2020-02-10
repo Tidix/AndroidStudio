@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         d2 = findViewById(R.id.d2);
         d3 = findViewById(R.id.d3);
 
-        //d1.setImageResource(R.drawable.dice_1);
+        d1.setImageResource(R.drawable.dice_1);
         //d2.setImageResource(R.drawable.dice_1);
         //d3.setImageResource(R.drawable.dice_1);
     }
