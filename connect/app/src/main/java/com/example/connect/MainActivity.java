@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void initiate(){
-        id =findViewById(R.id.id);
-        mdp = findViewById(R.id.mdp);
+        //id =findViewById(R.id.id);
+        //mdp = findViewById(R.id.mdp);
     }
 
 
