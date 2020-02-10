@@ -2,6 +2,10 @@ package com.example.lancerde;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +18,7 @@ import android.os.Handler;
 import com.bumptech.glide.Glide;
 
 import java.io.File;
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -24,11 +29,15 @@ public class MainActivity extends AppCompatActivity {
     private ImageView d1;
     private ImageView d2;
     private ImageView d3;
-    private int vd1 = 2;
-    private int vd2 = 2;
-    private int vd3 = 3;
+    private int vd1 = 1;
+    private int vd2 = 1;
+    private int vd3 = 1;
     private int scor;
+
     private MediaPlayer explosion;
+
+    SensorManager sensorManager;
+    private float mAccel, mAccelCurrent, mAccelLast;
 
 
     @Override
@@ -38,11 +47,13 @@ public class MainActivity extends AppCompatActivity {
         initiate();
     }
 
-    public void bLancer(View v){
-        lancer(v);
-    }
+    public void bLancer(View v){lancer();}
+    public void bLancerD1(View v){lancerD1();}
+    public void bLancerD2(View v){lancerD2();}
+    public void bLancerD3(View v){lancerD3();}
 
-    public void lancer(View v){
+    public void lancer(){
+        onPause();
         button.setEnabled(false);
         Glide.with(this).load(R.drawable.explosion).into(d3);
         Glide.with(this).load(R.drawable.explosion).into(d1);
@@ -57,9 +68,30 @@ public class MainActivity extends AppCompatActivity {
                 lancerD2();
                 lancerD3();
                 button.setEnabled(true);
+                onResume();
             }
         }, 500);
     }
+
+    private final SensorEventListener sensorListener = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            float x = event.values[0];
+            float y = event.values[1];
+            float z = event.values[2];
+            mAccelLast = mAccelCurrent;
+            mAccelCurrent = (float) Math.sqrt((double) (x * x + y * y + z * z));
+            float delta = mAccelCurrent - mAccelLast;
+            mAccel = mAccel * 0.9f + delta;
+            if (mAccel > 8) {
+                lancer();
+            }
+        }
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        }
+    };
+
 
     public void scoring() {
         String texte = "\n\n";
@@ -159,7 +191,16 @@ public class MainActivity extends AppCompatActivity {
         explosion.start();
     }
 
-
+    @Override
+    protected void onResume() {
+        sensorManager.registerListener(sensorListener, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+        super.onResume();
+    }
+    @Override
+    protected void onPause() {
+        sensorManager.unregisterListener(sensorListener);
+        super.onPause();
+    }
 
     public void initiate(){
         button = findViewById(R.id.bouton);
@@ -168,6 +209,13 @@ public class MainActivity extends AppCompatActivity {
         d2 = findViewById(R.id.d2);
         d3 = findViewById(R.id.d3);
         explosion = MediaPlayer.create(this, R.raw.explosion);
+
+        sensorManager = (SensorManager) getSystemService(this.SENSOR_SERVICE);
+        Objects.requireNonNull(sensorManager).registerListener(sensorListener, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                SensorManager.SENSOR_DELAY_NORMAL);
+        mAccel = 10f;
+        mAccelCurrent = SensorManager.GRAVITY_EARTH;
+        mAccelLast = SensorManager.GRAVITY_EARTH;
 
         Glide.with(this).load(R.drawable.dice_1).into(d1);
         Glide.with(this).load(R.drawable.dice_1).into(d2);

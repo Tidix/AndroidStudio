@@ -29,21 +29,21 @@
                             android:id="@+id/d1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"/>
-                            <!--android:onClick="lancerD1" -->
+                            android:layout_weight="1"
+                            android:onClick="bLancerD1"/>
 
                         <ImageView
                             android:id="@+id/d2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"/>
-                            <!--android:onClick="lancerD2"/>-->
+                            android:layout_weight="1"
+                            android:onClick="bLancerD2"/>/
                         <ImageView
                             android:id="@+id/d3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"/>
-                            <!--android:onClick="lancerD3"-->
+                            android:layout_weight="1"
+                            android:onClick="bLancerD3"/>
 
                     </LinearLayout>
 
