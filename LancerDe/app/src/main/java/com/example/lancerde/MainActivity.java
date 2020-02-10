@@ -10,15 +10,15 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
-    TextView score;
-    ImageView d1;
-    ImageView d2;
-    ImageView d3;
-    int vd1;
-    int vd2;
-    int vd3;
-
+    private Button button;
+    private TextView score;
+    private ImageView d1;
+    private ImageView d2;
+    private ImageView d3;
+    private int vd1;
+    private int vd2;
+    private int vd3;
+    private int scor;
 
 
 
@@ -34,11 +34,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void lancer(int nde){
-        vd1 = (int)Math.random()%6 +1;
-        vd2 = (int)Math.random()%6 +1;
-        vd3 = (int)Math.random()%6 +1;
-        changerImage();
+        vd1 = (int) (Math.random()%6 +1);
+        vd2 = (int) (Math.random()%6 +1);
+        vd3 = (int) (Math.random()%6 +1);
+        //changerImage();
+        scoring();
+    }
 
+    public void scoring(){
+        scor = vd1 + vd2 + vd3;
+        score.setText("Score du lancer de dé : " + vd1 + " + " + vd2 + " + " + vd3 + " = " + scor);
     }
 
     public void changerImage(){
@@ -76,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
         d2 = findViewById(R.id.d2);
         d3 = findViewById(R.id.d3);
 
-        d1.setImageResource(R.drawable.dice_1);
-        d2.setImageResource(R.drawable.dice_1);
-        d3.setImageResource(R.drawable.dice_1);
+        //d1.setImageResource(R.drawable.dice_1);
+        //d2.setImageResource(R.drawable.dice_1);
+        //d3.setImageResource(R.drawable.dice_1);
     }
 }
