@@ -14,5 +14,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        final EditText login = (EditText) findViewById(R.id.user_email);
+        final EditText pass = (EditText) findViewById(R.id.user_password);
+        final Button loginButton = (Button) findViewById(R.id.connect);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,
+                        LoginDisplayActivity.class);
+                intent.putExtra(EXTRA_LOGIN, login.getText().toString());
+                intent.putExtra(EXTRA_PASSWORD, pass.getText().toString());
+                startActivity(intent);
+            }
+        });
     }
 }

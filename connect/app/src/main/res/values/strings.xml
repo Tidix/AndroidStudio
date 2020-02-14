@@ -9,5 +9,7 @@
     <string name="email">Adresse email</string>
     <string name="password">Mot de passe</string>
     <string name="connect">Se connecter</string>
-    <string name="title_activity_login_display">Ecran de connexion</string>
+    <string name="title_activity_login_display">LoginDisplayActivity</string>
+    <string name="hint_mail">"Ici : L'adresse email de l'utilisateur"</string>
+    <string name="hint_pass">"Ici : Le mot de passe de l'utilisateur"</string>
 </resources>
