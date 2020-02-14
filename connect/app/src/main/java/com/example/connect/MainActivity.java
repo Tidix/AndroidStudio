@@ -1,41 +1,18 @@
 package com.example.connect;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ArrayList<Identifiants> identifiants;
-    private EditText id;
-    private EditText mdp;
-
-
-
+    final String EXTRA_LOGIN = "user_login";
+    final String EXTRA_PASSWORD = "user_password";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initiate();
     }
-
-    /*public void connection(View v){
-        String idd = id.getText();
-        while(identifiants.get(i).identifier())
-    }*/
-
-
-
-    public void initiate(){
-        //id =findViewById(R.id.id);
-        //mdp = findViewById(R.id.mdp);
-    }
-
-
 }
