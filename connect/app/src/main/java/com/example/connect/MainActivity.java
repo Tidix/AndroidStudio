@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText login;
     private EditText mdp;
     private Button loginButton;
+    private Session sess;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,5 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public static Session getSession(){
+        return sess;
     }
 }
