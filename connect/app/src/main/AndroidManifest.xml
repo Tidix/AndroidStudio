@@ -19,5 +19,8 @@
         <activity
             android:name="com.example.connect.LoginDisplayActivity"
             android:label="@string/title_activity_login_display" />
+        <activity
+            android:name="com.example.connect.question1"
+            android:label="@string/title_activity_question1" />
     </application>
 </manifest>

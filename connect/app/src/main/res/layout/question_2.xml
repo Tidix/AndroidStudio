@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.connect.question1">
+    tools:context="com.example.connect.question2">
 
     <TextView
         android:id="@+id/tvQuestion1"
@@ -21,14 +21,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btnValiderQ4"
+        app:layout_constraintBottom_toTopOf="@+id/ValiderQ4"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestion1">
 
         <CheckBox
             android:id="@+id/checkbox1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Q2Reponse1" >
+            android:text="@string/Q2Reponse1" />
 
         <CheckBox
             android:id="@+id/checkbox2"
@@ -41,17 +41,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Q2Reponse3" />
+
         <CheckBox
             android:id="@+id/checkbox4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Q2Reponse4"
+            android:text="@string/Q2Reponse4" />
 
-        </CheckBox>
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnValiderQ4"
+        android:id="@+id/ValiderQ2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="valider"
