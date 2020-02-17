@@ -46,7 +46,11 @@
             android:id="@+id/checkbox4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< Updated upstream
             android:text="@string/Q2Reponse4" />
+=======
+            android:text="@string/Q2Reponse4"/>
+>>>>>>> Stashed changes
 
     </LinearLayout>
 

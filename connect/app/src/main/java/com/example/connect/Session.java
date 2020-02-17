@@ -20,7 +20,8 @@ public class Session {
 
     public final int nombreDeQuestionsTotales = 5;
 
-    private Session() {
+    public Session(String id, String mdp) {
+        this.identifiant = id;
         this.score = 0;
         this.nbDeQuestionsRepondues = 0;
         this.instance = this;
@@ -29,9 +30,6 @@ public class Session {
     }
 
     static public Session getInstance(){
-        if(instance == null){
-            return new Session();
-        }
         return instance;
     }
 

@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         login = (EditText) findViewById(R.id.user_email);
         mdp = (EditText) findViewById(R.id.user_password);
         loginButton = (Button) findViewById(R.id.connect);
@@ -36,8 +35,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    public static Session getSession(){
-        return sess;
     }
 }
