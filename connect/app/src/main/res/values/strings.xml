@@ -19,5 +19,12 @@
     <string name="Q1Reponse1">oui</string>
     <string name="Q1Reponse2">une grosse salope</string>
 
+    <string name="question2">Qui-sont les salopes dans le td</string>
+    <string name="Q2Repons1">Arnaud</string>
+    <string name="Q2Repons2">Clément</string>
+    <string name="Q2Repons3">Damien</string>
+    <string name="Q2Repons4">Pierre</string>
+
+
 
 </resources>
