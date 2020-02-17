@@ -1,5 +1,12 @@
 package com.example.connect;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import com.example.jfa.connect1.R;
+
 public class LoginDisplayActivity extends Activity {
 
     final String EXTRA_LOGIN = "user_login";

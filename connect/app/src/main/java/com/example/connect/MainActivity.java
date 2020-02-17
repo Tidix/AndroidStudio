@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.jfa.connect1.R;
+
 public class MainActivity extends AppCompatActivity {
     final String EXTRA_LOGIN = "user_login";
     final String EXTRA_PASSWORD = "user_password";
