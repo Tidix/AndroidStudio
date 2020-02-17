@@ -10,6 +10,7 @@
     <string name="password">Mot de passe</string>
     <string name="connect">Se connecter</string>
     <string name="title_activity_login_display">LoginDisplayActivity</string>
+    <string name="title_activity_question1">Question 1</string>
     <string name="hint_mail">"Ici : L'adresse email de l'utilisateur"</string>
     <string name="hint_pass">"Ici : Le mot de passe de l'utilisateur"</string>
     <string name="bouton_validation">bouton validation</string>
@@ -20,10 +21,10 @@
     <string name="Q1Reponse2">une grosse salope</string>
 
     <string name="question2">Qui-sont les salopes dans le td</string>
-    <string name="Q2Repons1">Arnaud</string>
-    <string name="Q2Repons2">Clément</string>
-    <string name="Q2Repons3">Damien</string>
-    <string name="Q2Repons4">Pierre</string>
+    <string name="Q2Reponse1">Arnaud</string>
+    <string name="Q2Reponse2">Clément</string>
+    <string name="Q2Reponse3">Damien</string>
+    <string name="Q2Reponse4">Pierre</string>
 
 
 

@@ -31,13 +31,13 @@
             android:layout_margin="20sp">
 
             <RadioButton
-                android:id="@+id/rbBlanc"
+                android:id="@+id/Q1r1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Q1Reponse1" />
 
             <RadioButton
-                android:id="@+id/rbVertFluo"
+                android:id="@+id/Q1r2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Q1Reponse2" />
@@ -45,7 +45,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnValiderQ4"
+        android:id="@+id/validerQ1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="valider"
