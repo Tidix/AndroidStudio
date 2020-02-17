@@ -19,30 +19,48 @@ public class question2 extends AppCompatActivity {
     private CheckBox CB2;
     private CheckBox CB3;
     private CheckBox CB4;
-
-    private Button bouton;
-    private String ReponseValide;
-    private Session session;
-
+    private String EXTRA_LOGIN;
+    private String EXTRA_SCORE;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.question_1);
-        // -----ReponseValide = getString(R.string.rbQ1Rep1);
-
+        setContentView(R.layout.question_2);
+        CB1 = findViewById(R.id.checkbox1);
+        CB2 = findViewById(R.id.checkbox2);
+        CB3 = findViewById(R.id.checkbox3);
+        CB4 = findViewById(R.id.checkbox4);
         Intent intent = getIntent();
-        TextView logindisp = findViewById(R.id.loginQ1);
-        logindisp.setText("bonjour "+session.getIdentifiant());
+        TextView loginDisplay = findViewById(R.id.loginQ2);
+        final String login;
+        final int score;
+        login = intent.getStringExtra(EXTRA_LOGIN);
+        score = intent.getIntExtra(EXTRA_SCORE, 0);
+        loginDisplay.setText("Bonjour "+login+" score : " + score);
+
+        Button but = findViewById(R.id.ValiderQ2);
+        but.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                final int score2 = score + valider();
+                Intent intent = new Intent(question2.this,
+                        question3.class);
+                intent.putExtra(EXTRA_LOGIN, login);
+                intent.putExtra(EXTRA_SCORE, score2);
+                startActivity(intent);
+            }
+        });
     }
 
-    public void valider(View v){
-        if(rb1.isChecked())
-            Session.getInstance().incrementerScore();
+
+    public int valider(){
+        if (CB1.isChecked() && CB2.isChecked() && CB3.isChecked())
+            return 1;
         else
-            Session.getInstance().incrementerNbDeQuestionsRepondues();
-
-
+            return 0;
     }
+
+
 
             /*
                  super.onCreate(savedInstanceState);

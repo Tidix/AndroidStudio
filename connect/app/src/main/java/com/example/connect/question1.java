@@ -18,48 +18,43 @@ public class question1 extends AppCompatActivity {
     private RadioButton rb1;
     private RadioButton rb2;
     private Button bouton;
-    private String ReponseValide;
-    private Session session;
+    private String EXTRA_LOGIN;
+    private String EXTRA_SCORE;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_1);
-        // -----ReponseValide = getString(R.string.rbQ1Rep1);
-
         Intent intent = getIntent();
-        TextView logindisp = findViewById(R.id.loginQ1);
-        logindisp.setText("bonjour "+session.getIdentifiant());
+        TextView loginDisplay = findViewById(R.id.loginQ1);
+        final String login = intent.getStringExtra(EXTRA_LOGIN);
+        loginDisplay.setText("Bonjour "+login);
+        Button but = findViewById(R.id.ValiderQ1);
+
+        but.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                score = valider();
+                Intent intent = new Intent(question1.this,
+                        question2.class);
+                intent.putExtra(EXTRA_LOGIN, login);
+                intent.putExtra(EXTRA_SCORE, score);
+                startActivity(intent);
+            }
+        });
+
         group = findViewById(R.id.radioGroup);
-        if(intent!=null){
 
-        }
     }
 
-    public void valider(View v){
+    public int valider(){
         if(rb1.isChecked())
-            Session.getInstance().incrementerScore();
+            return 1;
         else
-            Session.getInstance().incrementerNbDeQuestionsRepondues();
-
-
+            return 0;
     }
-
-            /*
-                 super.onCreate(savedInstanceState);
-                 setContentView(R.layout.login_display);
-                 Intent intent = getIntent();
-                 TextView loginDisplay = (TextView)
-                findViewById(R.id.email_display);
-                 TextView passwordDisplay = (TextView)
-                findViewById(R.id.password_display);
-                 if (intent != null) {
-                 loginDisplay.setText(intent.getStringExtra(EXTRA_LOGIN));
-
-                passwordDisplay.setText(intent.getStringExtra(EXTRA_PASSWORD));
- }
- }
-             */
 
 
 }

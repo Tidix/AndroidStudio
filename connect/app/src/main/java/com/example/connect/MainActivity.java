@@ -15,14 +15,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText login;
     private EditText mdp;
     private Button loginButton;
-    private Session sess;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        login = (EditText) findViewById(R.id.user_email);
-        mdp = (EditText) findViewById(R.id.user_password);
+        login =  findViewById(R.id.user_email);
+        mdp =  findViewById(R.id.user_password);
+
         loginButton = (Button) findViewById(R.id.connect);
         loginButton.setOnClickListener(new View.OnClickListener() {
 

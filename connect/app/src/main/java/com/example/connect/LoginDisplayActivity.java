@@ -14,7 +14,6 @@ public class LoginDisplayActivity extends Activity {
     final String EXTRA_LOGIN = "user_login";
     final String EXTRA_PASSWORD = "user_password";
     private Button commencer;
-    //final Session SESSION;
 
 
     @Override
@@ -23,18 +22,14 @@ public class LoginDisplayActivity extends Activity {
         setContentView(R.layout.login_display);
 
         Intent intent = getIntent();
-        TextView loginDisplay = (TextView)
+        final TextView loginDisplay = (TextView)
                 findViewById(R.id.email_display);
         TextView passwordDisplay = (TextView)
                 findViewById(R.id.password_display);
-        final Session session = Session.getInstance();
         if (intent != null) {
             loginDisplay.setText(intent.getStringExtra(EXTRA_LOGIN));
             passwordDisplay.setText(intent.getStringExtra(EXTRA_PASSWORD));
         }
-
-        //SESSION = new Session(loginDisplay.getText().toString(), passwordDisplay.getText().toString());
-
 
 
         commencer = findViewById(R.id.QCM);
@@ -44,7 +39,7 @@ public class LoginDisplayActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginDisplayActivity.this,
                         question1.class);
-                //intent.putExtra(session, session);
+                intent.putExtra(EXTRA_LOGIN, loginDisplay.getText().toString());
                 startActivity(intent);
             }
         });

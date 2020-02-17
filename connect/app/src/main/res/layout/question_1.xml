@@ -7,6 +7,18 @@
     tools:context="com.example.connect.question1">
 
     <TextView
+        android:id="@+id/loginQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="bonjour"
+        app:layout_constraintBottom_toTopOf="@+id/ValiderQ1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
         android:id="@+id/tvQuestion1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,13 +35,6 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/ValiderQ1"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestion1">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/loginQ1"
-            android:text="bonjour"
-            />
 
 
 
@@ -57,7 +62,6 @@
         android:id="@+id/ValiderQ1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="valider"
         android:textColor="#FFFFFFFF"
         android:text="@string/bouton_validation"
         app:layout_constraintBottom_toBottomOf="parent"

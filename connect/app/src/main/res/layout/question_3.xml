@@ -7,6 +7,17 @@
     tools:context="com.example.connect.question3">
 
     <TextView
+        android:id="@+id/loginQ3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="bonjour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
         android:id="@+id/tvQuestion3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,7 +25,7 @@
         android:text="@string/question3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/loginQ3" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -29,14 +40,12 @@
             android:id="@+id/Vrai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="valider"
             android:text="@string/bouton_vrai"/>
 
         <Button
             android:id="@+id/Faux"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="rejeter"
             android:text="@string/bouton_faux"/>
 
     </LinearLayout>

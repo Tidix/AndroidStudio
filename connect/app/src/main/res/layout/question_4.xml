@@ -7,6 +7,18 @@
     tools:context="com.example.connect.question4">
 
     <TextView
+        android:id="@+id/loginQ4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:text="bonjour"
+        app:layout_constraintBottom_toTopOf="@+id/ValiderQ4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
         android:id="@+id/tvQuestion4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +62,6 @@
         android:id="@+id/ValiderQ4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="valider"
         android:textColor="#FFFFFFFF"
         android:text="@string/bouton_validation"
         app:layout_constraintBottom_toBottomOf="parent"
