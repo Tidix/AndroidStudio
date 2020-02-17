@@ -22,5 +22,14 @@
         <activity
             android:name="com.example.connect.question1"
             android:label="@string/title_activity_question1" />
+        <activity
+            android:name="com.example.connect.question2"
+            android:label="@string/title_activity_question2" />
+        <activity
+            android:name="com.example.connect.question3"
+            android:label="@string/title_activity_question3" />
+        <activity
+            android:name="com.example.connect.question4"
+            android:label="@string/title_activity_question4" />
     </application>
 </manifest>

@@ -11,6 +11,9 @@
     <string name="connect">Se connecter</string>
     <string name="title_activity_login_display">LoginDisplayActivity</string>
     <string name="title_activity_question1">Question 1</string>
+    <string name="title_activity_question2">Question 2</string>
+    <string name="title_activity_question3">Question 3</string>
+    <string name="title_activity_question4">Question 4</string>
     <string name="hint_mail">"Ici : L'adresse email de l'utilisateur"</string>
     <string name="hint_pass">"Ici : Le mot de passe de l'utilisateur"</string>
     <string name="bouton_validation">bouton validation</string>
@@ -29,6 +32,10 @@
     <string name="question3">Damien est vraiment une salope.</string>
     <string name="bouton_vrai">Vrai</string>
     <string name="bouton_faux">Faux</string>
+
+    <string name="question4">ce questionaire est bien ?</string>
+    <string name="Q4Reponse1">oui ?</string>
+    <string name="Q4Reponse2">éclaté au sol</string>
 
 
 </resources>
