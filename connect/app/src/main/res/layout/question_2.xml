@@ -7,12 +7,12 @@
     tools:context="com.example.connect.question2">
 
     <TextView
-        android:id="@+id/tvQuestion1"
+        android:id="@+id/tvQuestion2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:text="@string/question2"
-        app:layout_constraintBottom_toTopOf="@+id/btnValiderQ4"
+        app:layout_constraintBottom_toTopOf="@+id/ValiderQ2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/ValiderQ4"
+        app:layout_constraintBottom_toTopOf="@+id/ValiderQ2"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestion1">
 
         <CheckBox
