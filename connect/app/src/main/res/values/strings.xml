@@ -13,6 +13,7 @@
     <string name="hint_mail">"Ici : L'adresse email de l'utilisateur"</string>
     <string name="hint_pass">"Ici : Le mot de passe de l'utilisateur"</string>
     <string name="bouton_validation">bouton validation</string>
+    <string name="StartQCM">Commencer</string>
 
     <string name="question1">Est-ce-que Damien est une salope ?</string>
     <string name="Q1Reponse1">oui</string>
