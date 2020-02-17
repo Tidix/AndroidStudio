@@ -12,15 +12,18 @@ import com.example.jfa.connect1.R;
 public class MainActivity extends AppCompatActivity {
     final String EXTRA_LOGIN = "user_login";
     final String EXTRA_PASSWORD = "user_password";
+    private EditText login;
+    private EditText mdp;
+    private Button loginButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText login = (EditText) findViewById(R.id.user_email);
-        final EditText pass = (EditText) findViewById(R.id.user_password);
-        final Button loginButton = (Button) findViewById(R.id.connect);
+        login = (EditText) findViewById(R.id.user_email);
+        mdp = (EditText) findViewById(R.id.user_password);
+        loginButton = (Button) findViewById(R.id.connect);
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,
                         LoginDisplayActivity.class);
                 intent.putExtra(EXTRA_LOGIN, login.getText().toString());
-                intent.putExtra(EXTRA_PASSWORD, pass.getText().toString());
+                intent.putExtra(EXTRA_PASSWORD, mdp.getText().toString());
                 startActivity(intent);
             }
         });
