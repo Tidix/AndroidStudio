@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".question1">
+    tools:context="com.example.connect.question1">
 
     <TextView
         android:id="@+id/tvQuestion1"
@@ -34,25 +34,13 @@
                 android:id="@+id/rbBlanc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/rbQ1Rep1" />
+                android:text="@string/Q1Reponse1" />
 
             <RadioButton
                 android:id="@+id/rbVertFluo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/rbQ1Rep2" />
-
-            <RadioButton
-                android:id="@+id/rbMarron"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/rbQ1Rep3" />
-
-            <RadioButton
-                android:id="@+id/rbNoir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/rbQ1Rep4" />
+                android:text="@string/Q1Reponse2" />
         </RadioGroup>
     </LinearLayout>
 
@@ -60,8 +48,7 @@
         android:id="@+id/btnValiderQ4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickValider"
-        android:background="@drawable/bouton_valider"
+        android:onClick="valider"
         android:textColor="#FFFFFFFF"
         android:text="@string/bouton_validation"
         app:layout_constraintBottom_toBottomOf="parent"
