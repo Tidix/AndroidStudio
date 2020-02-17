@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private MediaPlayer explosion;
 
-    SensorManager sensorManager;
+    SensorManager sensor;
     private float mAccel, mAccelCurrent, mAccelLast;
 
 
@@ -193,12 +193,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        sensorManager.registerListener(sensorListener, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+        sensor.registerListener(sensorListener, sensor.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), sensor.SENSOR_DELAY_NORMAL);
         super.onResume();
     }
     @Override
     protected void onPause() {
-        sensorManager.unregisterListener(sensorListener);
+        sensor.unregisterListener(sensorListener);
         super.onPause();
     }
 
@@ -209,9 +209,9 @@ public class MainActivity extends AppCompatActivity {
         d2 = findViewById(R.id.d2);
         d3 = findViewById(R.id.d3);
         explosion = MediaPlayer.create(this, R.raw.explosion);
-
-        sensorManager = (SensorManager) getSystemService(this.SENSOR_SERVICE);
-        Objects.requireNonNull(sensorManager).registerListener(sensorListener, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+        // prit d'internet :o
+        sensor = (SensorManager) getSystemService(this.SENSOR_SERVICE);
+        Objects.requireNonNull(sensor).registerListener(sensorListener, sensor.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                 SensorManager.SENSOR_DELAY_NORMAL);
         mAccel = 10f;
         mAccelCurrent = SensorManager.GRAVITY_EARTH;
