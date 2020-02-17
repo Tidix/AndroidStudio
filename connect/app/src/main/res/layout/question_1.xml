@@ -24,6 +24,15 @@
         app:layout_constraintBottom_toTopOf="@+id/ValiderQ1"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestion1">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/loginQ1"
+            android:text="bonjour"
+            />
+
+
+
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="match_parent"
