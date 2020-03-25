@@ -1,0 +1,4 @@
+#Mon Mar 09 12:54:59 CET 2020
+base.0=D\:\\DUT\\semestre 4\\M4104 - Appli Andro\\AndroidStudio\\AndroidStudio\\contact\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
